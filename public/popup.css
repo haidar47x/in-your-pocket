@@ -1,0 +1,12 @@
+body {
+  width: 360px;
+  height: 480px;
+}
+
+.hide {
+  display: none
+}
+
+.show {
+  display: block;
+}
