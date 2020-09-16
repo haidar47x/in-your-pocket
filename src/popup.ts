@@ -117,7 +117,6 @@ async function setupInterface() {
 
 document.addEventListener('DOMContentLoaded', async () => {
   console.log('Executed...')
-  await clearLocalStorage()
   const isAuth = await isAuthenticated()
   if (!isAuth) {
     console.log('Is not authenticated...')
