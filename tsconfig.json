@@ -8,6 +8,6 @@
         "outDir": "dist/js",
         "noEmitOnError": true,
         "typeRoots": [ "node_modules/@types" ],
-        "types": ["chrome", "axios"]
+        "types": ["chrome", "jquery"]
     }
 }

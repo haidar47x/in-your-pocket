@@ -15,10 +15,12 @@
     "url": "https://github.com/exzish/in-your-pocket"
   },
   "dependencies": {
+    "jquery": "^3.5.1"
   },
   "devDependencies": {
     "@types/axios": "^0.14.0",
     "@types/chrome": "0.0.100",
+    "@types/jquery": "^3.5.1",
     "copy-webpack-plugin": "^6.1.0",
     "rimraf": "^3.0.2 ",
     "ts-loader": "^6.2.1",

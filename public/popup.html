@@ -6,19 +6,21 @@
   <title>Getting Started Extension's Popup</title>
   <link rel="stylesheet"
         href="./popup.css" />
+  <script src="js/vendor.js"></script>
 </head>
 
 <body>
   <button id="login-btn">Login To Pocket Now</button>
+  <h2 class="loader hide">Loading...</h2>
   <div class="container hide">
     <div class="header">
       <input type="text"
              placeholder="search"
              id="quick search" />
-      <img src="shuffle32.png"
+      <img id="add-icon" src="./icons/shuffle32.png"
            alt="settings"
            width="20px" />
-      <img src="settings48.png"
+      <img id="settings-icon" src="./icons/settings48.png"
            alt="settings"
            width="20px" />
     </div>

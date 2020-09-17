@@ -6,7 +6,7 @@ const baseUrl = 'https://getpocket.com/'
 function request(
   url: string,
   body: any,
-  method: HTTPMethods = HTTPMethods.POST
+  method: HTTPMethods = HTTPMethods.POST,
 ): Promise<any> {
   return new Promise((resolve, reject) => {
     fetch(baseUrl + url, {

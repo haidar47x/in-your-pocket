@@ -7,6 +7,6 @@ body {
   display: none
 }
 
-.show {
-  display: block;
+.list-item:nth-child(odd) {
+  background: #b7d7d7
 }
