@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'Teko';
+  src: url('../fonts/Teko-Bold.otf');
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  width: 480px;
+  min-width: 480px;
+  height: 480px;
+  min-height: 480px;
+  font-family: Cantarell, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header {
+  padding: 15px 25px 11px 10px;
+  box-shadow: 0 2px 2px #cccccc;
+  background: #485563; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #29323c,
+    #485563
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #29323c,
+    #485563
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header .left-controls {
+  padding: 1px 0 0 1px;
+}
+
+.header .right-controls img {
+  margin-left: 5px;
+}
+
+.header .right-controls img:last-child {
+  margin-left: 7px;
+}
+
+.header .page-title {
+  color: #dddddd;
+  padding-top: 1px;
+  font-size: 0.777em;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+.header img {
+  filter: invert();
+  cursor: pointer;
+  transition-duration: 150ms;
+  -webkit-transition-duration: 150;
+}
+
+.header img:hover {
+  fill: green;
+}
+
+.list {
+  height: 480px;
+  min-height: 480px;
+  overflow-y: scroll;
+  padding: 5px 8px;
+}
+
+.list-item {
+  border-bottom: 1px solid #d3c09a;
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+}
+
+.list-item .title {
+  font-weight: 500;
+}
+
+.list-item .title img {
+  margin-right: 5px;
+}
+
+.list-item .url {
+  margin-top: -7px;
+}
+
+.list-item .url a {
+  text-decoration: none;
+  color: #776d8a;
+  font-size: 0.7em;
+  padding-left: 5px;
+  font-weight: 400;
+}
+
+.list-item .delete-icon {
+  color: #c55141;
+}
+
+.list-item .delete-icon:hover {
+  color: #e98376;
+}
+
+.list-item .item-controls {
+  width: 50px;
+  display: none;
+  background: #d3c09a;
+}
+
+.list-item:hover {
+  padding-left: 7px;
+  cursor: pointer;
+}
+
+.list-item:hover .item-controls {
+  display: inline;
+}
+
+.list-item:hover .title {
+  color: #666666;
+}
+
+.list-item:hover .delete-icon {
+  display: inline;
+}
+
+.list-msg {
+  font-size: 0.888em;
+  padding: 5px 10px;
+  color: #666666;
+  position: absolute;
+  bottom: 6px;
+  right: 7px;
+}
+
+.no-items {
+  color: #aaaaaa;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 10px;
+  margin-top: 180px;
+}
+
+#search-input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 15px 5px 15px;
+  background: #29323c;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #ffffff;
+  outline: none;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  color: #cccccc;
+}
+
+.login-container {
+  display: flex;
+  height: 480px;
+}
+
+.login-container .login-controls {
+  margin: auto;
+}
+
+.login-container .login-btn {
+  font-weight: 400;
+  width: 240px;
+}
+
+.login-container .sign-up {
+  padding: 10px 0px;
+  color: #776d8a;
+}
+
+.login-container .sign-up p {
+  padding: 5px 0px;
+}
+
+.login-container .sign-up a {
+  font-weight: bold;
+}
+
+.login-container .sign-up a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #918ff7;
+}
+
+.toast {
+  width: 300px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.is-loading {
+  animation: rotation 2s infinite linear;
+  -webkit-animation: rotation 2s infinite linear;
+}
+
+.app-name {
+  color: #d57149;
+  font-family: 'Teko', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 60px;
+  display: flex;
+}
+
+.name {
+  width: 150px;
+  border-bottom: 3px solid #d57149;
+}
+
+.iyp-logo {
+  width: 40px;
+}
+
+.disclaimer {
+  font-size: 0.8em;
+  color: #888888;
+  padding: 10px 30px;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}

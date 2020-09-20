@@ -1,6 +1,10 @@
 import PocketAuthenticator from '../config/PocketAuthenticator'
-import credientials from '../config/Credentials'
-import { setLocalStorageItem } from '../storage/local_storage'
+import credientials from '../config/api_config'
+import {
+  setLocalStorageItem,
+  getLocalStorageItem,
+  clearLocalStorage,
+} from '../storage/local_storage'
 
 async function authenticateUser(): Promise<boolean> {
   return new Promise((resolve, reject) => {
@@ -8,7 +12,6 @@ async function authenticateUser(): Promise<boolean> {
     authenticator
       .authenticate()
       .then(pocketToken => {
-        console.log(pocketToken, 'acquired...')
         setLocalStorageItem({ pocketToken })
           .then(() => {
             resolve(pocketToken ? true : false)
@@ -25,22 +28,25 @@ async function authenticateUser(): Promise<boolean> {
 
 async function isAuthenticated(): Promise<boolean> {
   return new Promise((resolve, reject) => {
-    chrome.storage.local.get('pocketToken', items => {
-      console.log(items)
-      if (!items.pocketToken) {
-        resolve(false)
-      }
-      resolve(true)
-    })
+    getLocalStorageItem('pocketToken')
+      .then(token => {
+        if (!token) {
+          resolve(false)
+        }
+        resolve(true)
+      })
+      .catch(err => reject(err))
   })
 }
 
 async function logout(): Promise<boolean> {
   return new Promise((resolve, reject) => {
-    chrome.storage.local.clear(() => {
-      window.close()
-      resolve(true)
-    })
+    clearLocalStorage()
+      .then(() => {
+        window.close()
+        resolve(true)
+      })
+      .catch(err => reject(err))
   })
 }
 

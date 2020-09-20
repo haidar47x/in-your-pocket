@@ -4,29 +4,66 @@
 <head>
   <meta charset="UTF-8">
   <title>Getting Started Extension's Popup</title>
+  <link rel='stylesheet'
+        href='./assets/css/spectre.min.css'>
   <link rel="stylesheet"
-        href="./popup.css" />
-  <script src="js/vendor.js"></script>
+        href="./assets/css/popup.css" />
+  <script src="./js/vendor.js"></script>
 </head>
 
 <body>
-  <button id="login-btn">Login To Pocket Now</button>
-  <h2 class="loader hide">Loading...</h2>
-  <div class="container hide">
-    <div class="header">
-      <input type="text"
-             placeholder="search"
-             id="quick search" />
-      <img id="add-icon" src="./icons/shuffle32.png"
-           alt="settings"
-           width="20px" />
-      <img id="settings-icon" src="./icons/settings48.png"
-           alt="settings"
-           width="20px" />
+  <div class="login-container">
+    <div class="login-controls">
+      <div class="app-name">
+        <div class="iyp-logo"><img src="./assets/logo/logo@32.png" /></div>
+        <div class="name"><h4>In Your Pocket</h4></div>
+      </div>
+      <button class="btn btn-lg btn-primary login-btn">Authenticate with Pocket</button>
+      <div class="sign-up">
+        <p>Don't have pocket account? <a href="https://getpocket.com/signup"
+             target="_blank">Create one</a></p>
+      </div>
     </div>
-    <div class="list"></div>
   </div>
-  <script src="js/popup.js"></script>
+  <div class="disclaimer">
+    <em>In Your Pocket is an unofficial client for Pocket. It uses Pocket's publicly available API. It is not in any way affiliated with The Mozilla Corporation.</em>
+  </div>
+  <!-- Container -->
+  <div class="container hide">
+    <!-- Popup Header -->
+    <div class="columns col-oneline col-gapless header">
+      <div class="column col-1 left-controls">
+        <img class="settings-icon"
+             src="./assets/icons/gear-fill.svg" />
+      </div>
+      <div class="column col-9 page-title truncate"></div>
+      <div class="column col-auto right-controls">
+        <img class="refresh-icon"
+             src="./assets/icons/arrow-clockwise.svg" />
+        <img class="random-icon"
+             src="./assets/icons/shuffle.svg" />
+        <img class="add-icon"
+             src="./assets/icons/plus-square-fill.svg" />
+      </div>
+    </div> <!-- Popup Header -->
+
+    <!-- List of Pocket Items -->
+    <span class="list-msg chip"></span>
+    <div class="list"></div>
+    <div class="toast toast-error">
+      <button class="btn btn-clear float-right"></button>
+      <span class='msg'>Something went wrong, try again!</span>
+    </div>
+
+    <!-- Popup Footer -->
+    <!-- <img src="./assets/icons/search.svg"
+             width="15px"
+             class="find-icon" /> -->
+    <input type="text"
+           id="search-input"
+           placeholder="Search your pocket" value=""/>
+  </div> <!-- Container -->
+  <script src="./js/popup.js"></script>
 </body>
 
 </html>

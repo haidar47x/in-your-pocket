@@ -1,3 +1,4 @@
+import * as $ from 'jquery'
 import { retrieve } from '../pocket'
 import { itemsToArray } from '../utils'
 import { createList } from '../ui'
@@ -35,6 +36,7 @@ async function removeLocalStorageItem(item: any): Promise<boolean> {
 }
 
 async function syncLocalwithPocket(): Promise<any> {
+  $('.refresh-icon').addClass('is-loading')
   return new Promise((resolve, reject) => {
     retrieve({ state: 'all' })
       .then(async ({ list: items }) => {
@@ -45,6 +47,7 @@ async function syncLocalwithPocket(): Promise<any> {
         })
           .then(() => {
             createList(itemsArr)
+            $('.refresh-icon').removeClass('is-loading')
             resolve(itemsArr)
           })
           .catch(err => reject(err))

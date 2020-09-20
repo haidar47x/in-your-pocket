@@ -8,11 +8,9 @@ interface IAuthFlowParams {
 
 class PocketAuthenticator {
   constructor(private readonly credentials: PocketCredientials) {
-    console.log('Authenticator created ', credentials)
   }
 
   private getAuthUri({ code, redirect_uri }: IAuthFlowParams): string {
-    console.log('Getting authencation URI')
     let authUri = 'https://getpocket.com/auth/authorize?'
     return authUri + `request_token=${code}&redirect_uri=${redirect_uri}`
   }
@@ -20,7 +18,6 @@ class PocketAuthenticator {
   private launchWebAuthFlow(
     code: string
   ): Promise<{ responseUrl: string | null; code: string }> {
-    console.log('Web auth flow launched')
     return new Promise((resolve, reject) => {
       chrome.identity.launchWebAuthFlow(
         {
@@ -52,7 +49,7 @@ class PocketAuthenticator {
             code: response.code,
           })
             .then(tokenResponse => {
-              console.log("Request compoleted...")
+              console.log("Auth flow completed...")
               resolve(tokenResponse.access_token)
             })
             .catch(err => {
