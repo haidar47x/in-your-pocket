@@ -4,7 +4,7 @@ In Your Pocket is an alternative solution to the official Pocket Chrome extensio
 
 ## Download
 
-You can download the extension from (Chrome Webstore)[https://chrome.google.com/webstore/detail/in-your-pocket]
+You can download the extension from [Chrome Web Store](https://chrome.google.com/webstore/detail/in-your-pocket)
 
 ## Building
 
