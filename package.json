@@ -1,6 +1,6 @@
 {
   "name": "in-your-pocket",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
