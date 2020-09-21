@@ -1,6 +1,6 @@
 ## In Your Pocket Chrome Extension
 
-In Your Pocket is an alternative solution to the official Pocket Chrome extension. It provides additional features and in-browser Pocket experience. If you think you can help improve this project, feel free to contribute.
+In Your Pocket is an alternative solution to the official Pocket Chrome extension. It provides additional features and in-browser (Pocket)[https://getpocket.com] experience. In Your Pocket is inspired by the open-source project [In My Pocket](https://addons.mozilla.org/en-US/firefox/addon/in-my-pocket/) for Mozilla Firefox. If you think you can help improve this project, feel free to contribute.
 
 ### Download
 
@@ -8,7 +8,7 @@ You can download the extension from [Chrome Web Store](https://chrome.google.com
 
 ### Building
 
-You need to have `npm` installed on your machine. Clone the repository and install the dependencies using `npm install`.
+You need to have (download)[https://nodejs.org] and install `npm` on your machine. Clone the repository and install the dependencies using `npm install`.
 
 * `npm run watch`: Packs the source using development config and runs webpack in watch mode.
 * `npm run build`: Packs the source using production config.
@@ -18,4 +18,4 @@ You need to have `npm` installed on your machine. Clone the repository and insta
 
 ### Contact
 
-If you have any suggestions to make this project better, you can email me at haidarzsh@gmail.com.
+If you have any suggestions to make this project better, you can email me at haidarzsh@gmail.com. I've also created a [Trello board](https://trello.com/b/WH2PPRZz) for the project to manage and make it better.
