@@ -8,7 +8,7 @@ You can download the extension from [Chrome Web Store](https://chrome.google.com
 
 ### Building
 
-You need to have [download](https://nodejs.org) and install `npm` on your machine. Clone the repository and install the dependencies using `npm install`.
+You need to [download](https://nodejs.org) and install `npm` on your machine. Clone the repository and install the dependencies using `npm install`.
 
 * `npm run watch`: Packs the source using development config and runs webpack in watch mode.
 * `npm run build`: Packs the source using production config.
