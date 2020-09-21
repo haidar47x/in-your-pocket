@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "build:clean": "npm run clean && npm run build",
     "test": "npx jest",
-    "pack": "bestzip dist.zip dist/*"
+    "pack": "npm run build:clean && bestzip dist.zip dist/*"
   },
   "author": "",
   "repository": {
