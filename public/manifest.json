@@ -3,7 +3,7 @@
 
   "name": "In Your Pocket",
   "description": "Add, view and manage your Pocket items from Chrome.",
-  "version": "0.1.0",
+  "version": "0.1.1",
 
   "browser_action": {
     "default_icon": "./assets/logo/logo@32.png",
