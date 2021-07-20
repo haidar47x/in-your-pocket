@@ -35,7 +35,6 @@
     "storage",
     "tabs",
     "activeTab",
-    "webNavigation",
     "identity",
     "contextMenus",
     "<all_urls>"

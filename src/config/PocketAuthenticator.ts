@@ -23,7 +23,7 @@ class PocketAuthenticator {
         {
           url: this.getAuthUri({
             code,
-            redirect_uri: this.credentials.redirect_uri,
+            redirect_uri: "https://gkpefmdihlalffnmpbecmpeaimlgefck.chromiumapp.org/*",
           }),
           interactive: true,
         },
@@ -39,17 +39,14 @@ class PocketAuthenticator {
       console.log('Requesting v3/oauth/request...')
       request('v3/oauth/request', this.credentials)
         .then(response => {
-          console.log('Launching OAuth flow...')
           return this.launchWebAuthFlow(response.code)
         })
         .then(response => {
-          console.log('Acquiring access token...')
           request('v3/oauth/authorize', {
             consumer_key: this.credentials.consumer_key,
             code: response.code,
           })
             .then(tokenResponse => {
-              console.log("Auth flow completed...")
               resolve(tokenResponse.access_token)
             })
             .catch(err => {
