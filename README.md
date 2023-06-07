@@ -1,4 +1,4 @@
-## In Your Pocket Chrome Extension
+## In Your Pocket 
 
 In Your Pocket is an alternative solution and unofficial client for the [Pocket](https://getpocket.com) web service. It provides additional features and in-browser [Pocket](https://getpocket.com) experience. In Your Pocket is inspired by the open-source project [In My Pocket](https://addons.mozilla.org/en-US/firefox/addon/in-my-pocket/) for Mozilla Firefox. If you think you can help improve this project, feel free to contribute.
 
